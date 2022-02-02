@@ -49,7 +49,7 @@ def create_labels(classes, depths, class_names):
     return labels
 
 # The main object detection function
-def object_detection(input_img = "examples/267_image.jpg"):
+def object_detection(input_img = "examples/267_image.jpg", depth_lim = 0, lim_type = 0):
     im = mpimg.imread(input_img)
 
     cfg = get_cfg()
@@ -68,6 +68,22 @@ def object_detection(input_img = "examples/267_image.jpg"):
 
     # prepare depth numbers (in meters)
     obj_depths = calc_object_depth(outputs_instances.pred_masks, depth_map)
+
+    if (lim_type==1):
+        idx = []
+        for i in range(outputs_instances.pred_masks.shape[0]):
+            if(obj_depths[i]<=depth_lim):
+                idx.append(i)
+        obj_depths = obj_depths[idx]
+        outputs_instances = outputs_instances[idx]
+    elif (lim_type==2):
+        idx = []
+        for i in range(outputs_instances.pred_masks.shape[0]):
+            if(obj_depths[i]>=depth_lim):
+                idx.append(i)
+        obj_depths = obj_depths[idx]
+        outputs_instances = outputs_instances[idx]
+
     obj_depths_str = [('{:.2f}'.format(x) + ' m') for x in obj_depths]
 
     # visualize the output
@@ -92,5 +108,9 @@ def object_detection(input_img = "examples/267_image.jpg"):
         assigned_colors=colors,
         alpha=alpha,
     )
-    plt.imshow(v.output.get_image()[:, :, ::-1])
-    plt.show()
+    cv2.imwrite("output.jpg", cv2.cvtColor(v.output.get_image()[:, :, ::-1], cv2.COLOR_RGB2BGR))
+
+    class_names = v.metadata.get("thing_classes", None)
+    with open("output.txt", "w") as filehandle:
+        for i in range(outputs_instances.pred_masks.shape[0]):
+            filehandle.write("Class: {} - Distance: {}\n".format(class_names[classes[i]], obj_depths_str[i]))
