@@ -19,7 +19,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         MainWindow.resize(1566, 895)
         MainWindow.setGeometry(50, 50, MainWindow.width(), MainWindow.height())
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../DL Final Project 2/examples/Icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("Icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
 
         self.img_addr = ""
@@ -35,7 +35,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.input_img = QtWidgets.QLabel(self.input_box)
         self.input_img.setGeometry(QtCore.QRect(64, 50, 640, 480))
         self.input_img.setText("")
-        self.input_img.setPixmap(QtGui.QPixmap("../DL Final Project 2/examples/dlpng_com_Download_clear_snow_png_images_background_ _TOPpng_6968907.png"))
+        self.input_img.setPixmap(QtGui.QPixmap("empty.png"))
         self.input_img.setScaledContents(True)
         self.input_img.setObjectName("input_img")
         self.load_model_btn = QtWidgets.QPushButton(self.input_box)
@@ -75,7 +75,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.output_img = QtWidgets.QLabel(self.output_box)
         self.output_img.setGeometry(QtCore.QRect(64, 50, 640, 480))
         self.output_img.setText("")
-        self.output_img.setPixmap(QtGui.QPixmap("../DL Final Project 2/examples/dlpng_com_Download_clear_snow_png_images_background_ _TOPpng_6968907.png"))
+        self.output_img.setPixmap(QtGui.QPixmap("empty.png"))
         self.output_img.setScaledContents(True)
         self.output_img.setObjectName("output_img")
         self.save_img_btn = QtWidgets.QPushButton(self.output_box)
