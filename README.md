@@ -32,8 +32,12 @@
 ```
 pip install -r Requirements.txt
 ```
-3. Download the pre-trained model weights from [this link](https://drive.google.com/file/d/10-OSvP7IaQt_Vnl8MnfCLXSLpbGunH50/view?usp=sharing).
-4. Run the following command to open the GUI:
+3. Install [Detectron2](https://github.com/facebookresearch/detectron2) library using the following command:
+```
+pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cpu/torch1.10/index.html
+```
+5. Download the pre-trained model weights from [this link](https://drive.google.com/file/d/10-OSvP7IaQt_Vnl8MnfCLXSLpbGunH50/view?usp=sharing).
+6. Run the following command to open the GUI:
 ```
 python Main.py
 ```
