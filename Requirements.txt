@@ -1,0 +1,12 @@
+torch
+torchvision
+tensorflow
+keras
+numpy
+pillow
+scipy
+h5py
+matplotlib
+opencv-python
+PyQt5
+pyqt5-tools
