@@ -36,15 +36,15 @@ pip install -r Requirements.txt
 ```
 pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cpu/torch1.10/index.html
 ```
-5. Download the pre-trained model weights from [this link](https://drive.google.com/file/d/10-OSvP7IaQt_Vnl8MnfCLXSLpbGunH50/view?usp=sharing).
-6. Run the following command to open the GUI:
+4. Download the pre-trained model weights from [this link](https://drive.google.com/file/d/10-OSvP7IaQt_Vnl8MnfCLXSLpbGunH50/view?usp=sharing).
+5. Run the following command to open the GUI:
 ```
 python Main.py
 ```
-5. Click on **Load Model** and select the file you downloaded in step 3.
-6. Click on **Load Image** and select an arbitrary .jpg or .png image.
-7. Click on **Evaluate** to generate the outputs. This usually takes 10-15 seconds.
-8. You can use **Save Image** and **Save Text** buttons to download the outputs.
+6. Click on **Load Model** and select the file you downloaded in step 4.
+7. Click on **Load Image** and select an arbitrary .jpg or .png image.
+8. Click on **Evaluate** to generate the outputs. This usually takes 10-15 seconds.
+9. You can use **Save Image** and **Save Text** buttons to download the outputs.
 ## Examples
 * Below you can see many examples from the project's inputs, outputs, and GUI:
 ![Example 1](examples/example1.png)
