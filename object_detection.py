@@ -50,7 +50,7 @@ def create_labels(classes, depths, class_names):
 
 # The main object detection function
 def object_detection(input_img = "examples/267_image.jpg", depth_lim = 0, lim_type = 0):
-    im = mpimg.imread(input_img)
+    im = cv2.imread(input_img)
 
     cfg = get_cfg()
     # add project-specific config (e.g., TensorMask) here if you're not running a model in detectron2's core library
@@ -108,7 +108,7 @@ def object_detection(input_img = "examples/267_image.jpg", depth_lim = 0, lim_ty
         assigned_colors=colors,
         alpha=alpha,
     )
-    cv2.imwrite("output.jpg", cv2.cvtColor(v.output.get_image()[:, :, ::-1], cv2.COLOR_RGB2BGR))
+    cv2.imwrite("output.jpg", v.output.get_image()[:, :, ::-1])
 
     class_names = v.metadata.get("thing_classes", None)
     with open("output.txt", "w") as filehandle:

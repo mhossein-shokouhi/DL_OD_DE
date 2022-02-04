@@ -135,7 +135,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
     def press_load_img_btn(self):
         options = QtWidgets.QFileDialog.Options()
         options |= QtWidgets.QFileDialog.DontUseNativeDialog
-        self.img_addr, _ = QtWidgets.QFileDialog.getOpenFileName(self,"QtWidgets.QFileDialog.getOpenFileName()", "","Image Files (*.jpg)", options=options)
+        self.img_addr, _ = QtWidgets.QFileDialog.getOpenFileName(self,"QtWidgets.QFileDialog.getOpenFileName()", "","Image Files (*.jpg *.png)", options=options)
         if (self.img_addr):
             self.input_img.setPixmap(QtGui.QPixmap(self.img_addr))
 
