@@ -42,7 +42,7 @@ pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cpu/t
 python Main.py
 ```
 6. Click on **Load Model** and select the file you downloaded in step 4.
-7. Click on **Load Image** and select an arbitrary .jpg or .png image.
+7. Click on **Load Image** and select an arbitrary .jpg or .png image (preferably 640x480). You can find some example images in [pics](pics/) folder.
 8. Click on **Evaluate** to generate the outputs. This usually takes 10-15 seconds.
 9. You can use **Save Image** and **Save Text** buttons to download the outputs.
 ## Examples
