@@ -41,3 +41,10 @@ python Main.py
 6. Click on **Load Image** and select an arbitrary .jpg or .png image.
 7. Click on **Evaluate** to generate the outputs. This usually takes 10-15 seconds.
 8. You can use **Save Image** and **Save Text** buttons to download the outputs.
+## Examples
+* Below you can see many examples from the project's inputs, outputs, and GUI:
+![Example 1](examples/example1.png)
+![Example 1](examples/example2.png)
+![Example 1](examples/example3.png)
+![Example 1](examples/example4.png)
+![Example 1](examples/example5.png)
